@@ -35,7 +35,31 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DiffieHellman">
+      <HintPath>..\Gitsharp.Demo\lib\DiffieHellman.dll</HintPath>
+    </Reference>
+    <Reference Include="GitSharp">
+      <HintPath>..\Gitsharp.Demo\lib\GitSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="GitSharp.Core">
+      <HintPath>..\Gitsharp.Demo\lib\GitSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\Gitsharp.Demo\lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\Gitsharp.Demo\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Org.Mentalis.Security">
+      <HintPath>..\Gitsharp.Demo\lib\Org.Mentalis.Security.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="Tamir.SharpSSH">
+      <HintPath>..\Gitsharp.Demo\lib\Tamir.SharpSSH.dll</HintPath>
+    </Reference>
+    <Reference Include="Winterdom.IO.FileMap">
+      <HintPath>..\Gitsharp.Demo\lib\Winterdom.IO.FileMap.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -50,8 +74,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="RepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GitSharp.Demo\GitSharp.Demo.csproj">
+      <Project>{4b53ba11-1ade-44e7-ac0f-7748d5701c25}</Project>
+      <Name>GitSharp.Demo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
